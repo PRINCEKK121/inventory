@@ -1,1 +1,1 @@
-import './utils/sidebar-toggle.js';
+import './utils/modal.js';

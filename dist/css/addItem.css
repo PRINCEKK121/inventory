@@ -46,7 +46,7 @@ input:focus {
   cursor: pointer;
   margin: 0 0.5rem;
   font-size: 2rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .btn:hover {
@@ -54,7 +54,7 @@ input:focus {
 }
 
 .btn--passive {
-  color: #00329e;
+  color: #9e001a;
   background: transparent;
   border: none;
   box-shadow: none;
@@ -62,7 +62,7 @@ input:focus {
 
 .btn--passive:hover,
 .btn--passive:active {
-  background: #aec6f8;
+  background: #f8aeae;
 }
 
 #add-modal .modal__content {
@@ -73,10 +73,11 @@ input:focus {
 .modal {
   position: fixed;
   z-index: 100;
-  top: 30vh;
+  top: 10vh;
   display: none;
-  width: 40rem;
-  left: calc(50% - 20rem);
+  width: 40%;
+  left: calc(40% - 20rem);
+  margin: 0 auto;
 }
 
 .card {
