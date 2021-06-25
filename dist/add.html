@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Quantity</title>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/addItem.css" />
+  </head>
+  <body>
+    <header class="d-flex d-flex-y space-btn">
+      <h1>
+        <a href="#"> <i class="fas fa-bars"></i></a> Inventory App
+      </h1>
+
+      <div class="admin"><span>O</span> Owner</div>
+    </header>
+
+    <div class="container">
+      <main>
+        <button class="btn">add product</button>
+
+        <div id="backdrop" class="visible"></div>
+        <div class="modal card visible" id="add-modal">
+          <div class="modal__content">
+            <label for="title">Movie Title</label>
+            <input type="text" name="title" id="title" />
+            <label for="image-url">Image URL</label>
+            <input type="text" name="image-url" id="image-url" />
+            <label for="rating">Your Rating</label>
+            <input
+              type="number"
+              step="1"
+              max="5"
+              min="1"
+              name="rating"
+              id="rating"
+            />
+          </div>
+          <div class="modal__actions">
+            <button class="btn btn--passive">Cancel</button>
+            <button class="btn btn--success">Add</button>
+          </div>
+        </div>
+      </main>
+
+      <aside class="side-bar">
+        <ul class="menu-list">
+          <li class="menu-list-item">
+            <a href="index.html">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>All items</span>
+            </a>
+          </li>
+          <li class="menu-list-item active">
+            <a href="add.html">
+              <i class="fas fa-plus"></i>
+              <span>Add item</span>
+            </a>
+          </li>
+          <li class="menu-list-item">
+            <a href="update-quantity.html">
+              <i class="far fa-edit"></i>
+              <span>Update quantity or stock</span>
+            </a>
+          </li>
+          <li class="menu-list-item">
+            <a href="edit.html">
+              <i class="far fa-edit"></i>
+              <span>Update item details</span>
+            </a>
+          </li>
+          <li class="menu-list-item">
+            <a href="delete.html">
+              <i class="far fa-times-circle"></i>
+              <span>Remove item</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+    <script type="module" src="js/addItem.js"></script>
+  </body>
+</html>
