@@ -1,5 +1,5 @@
 import { select } from './selector.js';
-import { formatPrice } from './formatPrice.js';
+import Product from '../Product.js';
 
 const tableData = select('.product-body-table');
 
@@ -16,14 +16,18 @@ export const generateHTML = (productsData) => {
     // displaying the data in the html
     const displayData = productsData.map(
       ({ itemName, category, numberInStock, desc, price }) => {
+        const product = new Product(null, null, numberInStock, price, null);
+
+        console.log(product.numberInStock);
+
         return `
         <tr>
           <td>${itemName}</td>
           <td>${category}</td>
           <td>${desc}</td>
           <td>${numberInStock}</td>
-          <td>${formatPrice(price)}</td>
-          <td><i class="far fa-trash-alt"></i></td>
+          <td>${product.formatPrice()}</td>
+          <td class="status"><span class='${product.status()}'></span></td>
         </tr>
        `;
       }

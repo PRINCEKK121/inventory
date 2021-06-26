@@ -23,8 +23,8 @@ Product.prototype.isValidInputs = function () {
   if (isNaN(numInStock)) {
     alert('Please enter a valid number');
     return false;
-  } else if (numInStock < 1) {
-    alert('Please enter a number greater than 0');
+  } else if (numInStock < 0) {
+    alert('Please enter a number greater than or equal to 0');
     return false;
   }
 
@@ -43,5 +43,24 @@ Product.prototype.isValidInputs = function () {
 
   return true;
 };
+
+Product.prototype.formatPrice = function() {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  }).format(this.price);
+};
+
+Product.prototype.status = function() {
+  const stock = Number(this.numberInStock);
+  let status = '';
+
+  if (stock === 0) status = 'indicate-out-of-stock';
+  else if (stock >= 1 && stock <= 20)
+    status = 'indicate-almost-out-of-stock';
+  else status = 'indicate-in-stock';
+
+  return status;
+}
 
 export default Product;

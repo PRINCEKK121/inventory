@@ -42,6 +42,41 @@ header a:hover {
   color: #475466;
 }
 
+.indicators {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.indicators span {
+  position: relative;
+  top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.indicators span,
+tr span {
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.status {
+  text-align: center;
+}
+
+.indicate-out-of-stock {
+  background: #f84242;
+}
+
+.indicate-almost-out-of-stock {
+  background: #eed233;
+}
+
+.indicate-in-stock {
+  background: #43ff43;
+}
+
 header h1 {
   text-transform: uppercase;
   font-weight: 700;
@@ -112,6 +147,10 @@ th,
 td {
  text-align: left;
  padding: 1.5rem 1rem;
+}
+
+tr:hover {
+  background: #d3d9e0;
 }
 
 thead tr {
