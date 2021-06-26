@@ -1,11 +1,10 @@
 import { select } from './selector.js';
+import { formatPrice } from './formatPrice.js';
 
 const tableData = select('.product-body-table');
 
 export const generateHTML = (productsData) => {
-  console.log(productsData.length);
   if (productsData?.length === 0) {
-    console.log('it works');
     // remove the table if data is empty
     select('table').remove();
 
@@ -16,14 +15,14 @@ export const generateHTML = (productsData) => {
   } else {
     // displaying the data in the html
     const displayData = productsData.map(
-      ({ itemName, category, numberInStock, description, price }) => {
+      ({ itemName, category, numberInStock, desc, price }) => {
         return `
         <tr>
           <td>${itemName}</td>
           <td>${category}</td>
-          <td>${description}</td>
+          <td>${desc}</td>
           <td>${numberInStock}</td>
-          <td>$ ${price.toFixed(2)}</td>
+          <td>${formatPrice(price)}</td>
           <td><i class="far fa-trash-alt"></i></td>
         </tr>
        `;
