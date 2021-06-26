@@ -30,20 +30,27 @@
         <div id="backdrop"></div>
         <div class="modal card" id="add-modal">
           <div class="modal__content">
-            <label for="title">Movie Title</label>
-            <input type="text" name="title" id="title" />
-            <label for="image-url">Image URL</label>
-            <input type="text" name="image-url" id="image-url" />
-            <label for="rating">Your Rating</label>
-            <input
-              type="number"
-              step="1"
-              max="5"
-              min="1"
-              name="rating"
-              id="rating"
-            />
+            <p class="caption">All fields are required</p>
+            <label for="product-name">Product Name</label>
+            <input type="text" name="product-name" id="product-name" />
+
+            <label for="category">Category</label>
+            <select id="category">
+              <option value="Game">Game</option>
+              <option value="Phone">Phone</option>
+              <option value="Laptop">Laptop</option>
+            </select>
+
+            <label for="number-in-stock">Number in stock</label>
+            <input type="text" name="number-in-stock" id="number-in-stock"/>
+
+            <label for="product-price">Product Price</label>
+            <input type="text" name="product-price" id="product-price">
+
+            <label for="description">Description</label>
+            <textarea name="description" id="description"></textarea>
           </div>
+
           <div class="modal__actions">
             <button class="btn btn--passive">Cancel</button>
             <button class="btn btn--success">Add</button>
@@ -86,6 +93,6 @@
         </ul>
       </aside>
 
-    <script type="module" src="js/addItem.js"></script>
+    <script type="module" src="js/addProduct.js"></script>
   </body>
 </html>

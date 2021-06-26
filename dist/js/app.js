@@ -1,16 +1,13 @@
 import './utils/sidebar-toggle.js';
 import { generateHTML } from './utils/ui.js';
 
-const products = JSON.parse(localStorage.getItem('products'));
+let products = localStorage.getItem('products');
 
 document.addEventListener('DOMContentLoaded', () => {
-  // const data = initializer('./js/products.json');
-  try {
-    
-    generateHTML(products);
-  } catch (e) {
-    console.log('Error', e)
+  if (!products) {
+    products = [];
+    localStorage.setItem('products', JSON.stringify(products));
   }
-});
- 
 
+  generateHTML(JSON.parse(localStorage.getItem('products')));
+});
