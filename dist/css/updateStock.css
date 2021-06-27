@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background: #EBEDF0;
+}
+
+header {
+  padding: 1.5rem 1rem;
+  border-bottom: 0.1rem solid #ccc;
+  background: #fff;
+  padding-right: 3rem;
+}
+
+header > * {
+  font-size: 2rem;
+  color: #475466;
+}
+
+header a {
+  text-decoration: none;
+  padding: 1.2rem 1.4rem;
+  border-radius: 50%;
+  color: #94a1b3;
+  transition: 400ms;
+  display: inline-block;
+}
+
+header a:hover {
+  background: #edeff0;
+  color: #475466;
+}
+
+
+header h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.admin {
+  font-weight: 400;
+}
+
+.admin span {
+  background: #1ca1c1;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10rem;
+}
+/* main section */
+main {
+  margin: 1rem;
+  height: 87vh;
+  flex: 1;
+}
+
+main > * {
+  border: none;
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.45);
+}
+
+section.primary {
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  overflow-y: scroll;
+  align-self: stretch;
+  margin: auto;
+}
+
+.primary h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #475466;
+  border-bottom: 0.1rem solid #edeff0;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.add-some-data {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.add-some-data a {
+  font-weight: 400;
+  color: #1ca1c1;
+}
+
+table {
+  border-top: none;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 2rem;
+}
+
+tr, 
+th,
+td {
+ text-align: left;
+ padding: 1.5rem 1rem;
+}
+
+thead tr {
+  border-bottom-color: #1ca1c1;
+  background: #f4f5f9;
+}
+
+.scroller::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background: #C0C0C0;
+  border-radius: 10rem;
+}
+
+tr {
+  border-bottom: 0.1rem solid #edeff0;
+}
+
+th {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+td {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.action {
+  background: none;
+  color: #1ca1c1;
+  cursor: pointer;
+  border: 0.1rem solid;
+  padding: 1rem 1.5rem;
+}
+
+.summary-container {
+  width: 100%;
+  height: 60%;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1rem solid #edeff0;
+  font-size: 1.8rem;
+}
+
+.summary-container h3 {
+  color: #1ca1c1;
+  font-weight: 400;
+}
+
+.summary-container p {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.total-categories,
+.total-items {
+  margin-right: 1rem;
+}
+
+ /* side bar section */
+.side-bar {
+  width: 15%;
+  height: 92.9vh;
+  background: #4a4e58;
+  order: -1;
+  position: relative;
+}
+
+.toggle-menu-items {
+  width: 7rem;
+}
+
+.hide-menu-item-text {
+  display: none;
+}
+
+/* utils */
+.d-flex,
+.container {
+  display: flex;
+}
+
+.space-btn {
+  justify-content: space-between;
+}
+
+.d-flex-y {
+  align-items: center;
+}
+
+/* side bar menu */
+.menu-list {
+  list-style: none;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.menu-list-item a {
+  padding: 1.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: 100ms;
+  color: inherit;
+}
+
+.active {
+  color: #1ca1c1;
+  border-left: 0.5rem solid;
+}
+
+.menu-list-item a:hover {
+  background: #373a42;
+}
+
+.menu-list-item i[class^="fa"] {
+  width: 2rem;
+  font-size: 1.8rem;
+  margin: 0 1.4rem;
+}
+
+
+

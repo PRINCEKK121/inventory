@@ -1,11 +1,11 @@
 /********************************
  * Imports
  ********************************/
-import './utils/modal.js';
-import './utils/sidebar-toggle.js';
-import Product from './Product.js';
-import { select } from './utils/selector.js';
-import {closeProductModal, toggleBackdrop} from './utils/modalOperations.js';
+import '../utils/modal.js';
+import '../utils/sidebar-toggle.js';
+import Product from '../Product.js';
+import { select } from '../utils/selector.js';
+import {closeProductModal, toggleBackdrop} from '../utils/modalOperations.js';
 
 /***************************************
  * Functions
@@ -17,6 +17,14 @@ const clearInputFields = () => {
   select('#product-price').value = '';
   select('#description').value = '';
 }
+
+const showProductModal = () => {
+  select('#add-modal').classList.add('visible');
+  toggleBackdrop();
+};
+
+
+const startAddingProducts = select('#add-product');
 
 /***************************************
  * Event Handler
@@ -46,4 +54,5 @@ select('.btn--success').addEventListener('click', () => {
   }
 });
 
+startAddingProducts.addEventListener('click', showProductModal);
 select('.btn--passive').addEventListener('click', clearInputFields);
