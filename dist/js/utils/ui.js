@@ -4,6 +4,7 @@ import Product from '../Product.js';
 export const generateHTML = (productsData) => {
   if (productsData?.length === 0) {
     // remove the table if data is empty
+    // console.log(productsData);
     select('table').remove();
 
     select('.primary h2').insertAdjacentHTML(
