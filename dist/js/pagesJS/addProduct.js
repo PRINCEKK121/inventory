@@ -1,8 +1,9 @@
 /********************************
  * Imports
  ********************************/
-import '../utils/modal.js';
-import '../utils/sidebar-toggle.js';
+import './../utils/sidebar-toggle.js';
+import './../utils/modal.js';
+
 import Product from '../Product.js';
 import { select } from '../utils/selector.js';
 import {closeProductModal, toggleBackdrop} from '../utils/modalOperations.js';
@@ -16,6 +17,8 @@ const clearInputFields = () => {
   select('#number-in-stock').value = '';
   select('#product-price').value = '';
   select('#description').value = '';
+  closeProductModal();
+  toggleBackdrop();
 }
 
 const showProductModal = () => {
@@ -27,7 +30,7 @@ const showProductModal = () => {
 const startAddingProducts = select('#add-product');
 
 /***************************************
- * Event Handler
+ * Event Handlers
  ***************************************/
 select('.btn--success').addEventListener('click', () => {
   const newProduct = new Product(
@@ -56,3 +59,4 @@ select('.btn--success').addEventListener('click', () => {
 
 startAddingProducts.addEventListener('click', showProductModal);
 select('.btn--passive').addEventListener('click', clearInputFields);
+

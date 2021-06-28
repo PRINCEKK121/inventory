@@ -3,7 +3,7 @@ import { generateHTML } from './utils/ui.js';
 
 let products = localStorage.getItem('products') || [];
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
   if (!products.length) {
     localStorage.setItem('products', JSON.stringify(products));
     products = localStorage.getItem('products');

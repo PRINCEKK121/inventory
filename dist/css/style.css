@@ -61,10 +61,6 @@ tr span {
   border-radius: 50%;
 }
 
-.status {
-  text-align: center;
-}
-
 .indicate-out-of-stock {
   background: #f84242;
 }
@@ -190,17 +186,26 @@ section.secondary {
 
 .summary-container {
   width: 100%;
-  height: 60%;
+  height: 100%;
   padding: 4rem 2rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  border-bottom: 0.1rem solid #edeff0;
   font-size: 1.8rem;
+}
+
+.summary-container > * {
+  border: 0.1rem solid #e2dada;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
 }
 
 .summary-container h3 {
   color: #1ca1c1;
+  margin-bottom: 2rem;
   font-weight: 400;
 }
 

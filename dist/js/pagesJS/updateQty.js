@@ -2,6 +2,8 @@
  * IMPORTS
  *******************************/
 import './../utils/modal.js';
+import './../utils/sidebar-toggle.js';
+import './../app.js';
 
 import { generateHTML } from './../utils/ui.js';
 import { select } from './../utils/selector.js';
@@ -24,10 +26,12 @@ const clearInputField = () => {
   select('#add-quantity').focus();
 };
 
+/***************************
+ * Variables
+ ***************************/
 const productsData = JSON.parse(localStorage.getItem('products'));
 let productID, index;
 
-generateHTML(productsData);
 /*****************************
  * EVENT LISTENERS
  *****************************/

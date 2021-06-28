@@ -42,7 +42,6 @@ header a:hover {
   color: #475466;
 }
 
-
 header h1 {
   text-transform: uppercase;
   font-weight: 700;
@@ -144,11 +143,30 @@ td {
 }
 
 .action {
+  color: #1ca1c1;;
+}
+
+.delete {
+  color: #e95656;
+}
+
+.action,
+.delete {
   background: none;
-  color: #1ca1c1;
   cursor: pointer;
   border: 0.1rem solid;
   padding: 1rem 1.5rem;
+  transition: 300ms all;
+}
+
+.action:hover {
+  background: #1ca1c1;
+  color: #fff;
+}
+
+.delete:hover {
+  background: #e95656;
+  color: #fff;
 }
 
 .summary-container {

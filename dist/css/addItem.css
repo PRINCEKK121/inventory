@@ -32,7 +32,7 @@ label {
 }
 
 input[type="text"],
-#category,
+select,
 textarea {
   font-size: 1.6rem;
   border: 1px solid #ccc;
@@ -43,7 +43,7 @@ textarea {
   font-family: 'Roboto', sans-serif;
 }
 
-#category:focus,
+select:focus,
 input:focus,
 textarea:focus {
   outline: none;
